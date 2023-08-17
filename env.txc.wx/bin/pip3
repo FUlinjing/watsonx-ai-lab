@@ -1,4 +1,4 @@
-#!/Users/robert/Develop/PTS/techxchange-watsonx/env.txc.wx/bin/python3
+#!/Users/robert/Develop/PTS/techxchange-watsonx/env.txc.wx/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys
