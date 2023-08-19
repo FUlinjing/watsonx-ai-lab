@@ -35,7 +35,7 @@ class wxService:
         gen_parms_override = {  
             "decoding_method": "greedy",  
             "max_new_tokens": 500,  
-            "min_new_tokens": 250,  
+            "min_new_tokens": 20,  
             "stop_sequences": [],  
             "repetition_penalty": 1 
         }
@@ -46,7 +46,8 @@ class wxService:
         return retVal
     
     def buildRAGPrompt(self, question, context):
-        prompt_template = """
+        test1 = """
+        Task:
         Odpowiedz w jednym akapicie na pytanie: {{QUESTION}}
 
         Input:
@@ -54,6 +55,16 @@ class wxService:
 
         Output: 
         """
+        test2 = """
+        {{CONTEXT}}
+
+        PYTANIE: {{QUESTION}}
+        
+        ODPOWIEDŹ: 
+        """
+        prompt_template=test2
+
+
         prompt = prompt_template.replace('{{QUESTION}}',question).replace('{{CONTEXT}}',context)
         return prompt
 
