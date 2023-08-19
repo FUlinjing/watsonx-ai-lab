@@ -8,7 +8,7 @@ info:
     name: Robert Kleniewski
     url: https://linkedin.com/in/robert-kleniewski-8563241
     email: robert.kleniewski@pl.ibm.com
-  version: "1.0.5"
+  version: "1.1.0"
 # root path of the API
 servers:
   - url: "/api"
@@ -20,6 +20,8 @@ paths:
       tags:
         - "API functions"
       summary: "Retrieval Augmented Generation pattern using IBM Watson Discovery and IBM WatsonX."
+      security:
+        - apiKey: []
       requestBody:
           description: "Provide the question."
           required: True
@@ -69,6 +71,10 @@ paths:
                           type: string
                           description: "The passage text."
                           example: "Philosophers and cats ponder under the moonlight. You see, the meaning of life is a bit like Wi-Fi signal strength – you can search for it everywhere, sometimes it's strong and clear, and other times it leaves you wondering if it even exists."
+                  prompt:
+                    type: string
+                    description: "The LLM prompt used to generate an answer."
+                    example: "CONTEXT:\n{{CONTEXT}}\nQUESTION:\n{{QUESTION}}\nANSWER: "
         '400':
           description: Bad request
         '500':
@@ -94,3 +100,11 @@ paths:
         '500':
           description: Internal server error
 
+# security definitions
+components:
+  securitySchemes:
+    apiKey:
+      type: apiKey
+      name: X-API-Key
+      in: header
+      x-apikeyInfoFunc: api.apikeyAuth

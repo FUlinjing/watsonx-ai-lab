@@ -9,7 +9,21 @@ wd = wdService('./service.WD.cred')
 wx = wxService('./service.WX.cred')
 
 # Hardcoded API key for demonstration purposes
-API_KEY = 'ala_ma_kota'
+TOKEN_DB = {
+                "e6208484c8548f40d9a18c27bc9286a0a1dba0ab4979146460f1cc2d92635e33": {"username": "User01"},
+                "544ae5b1fb60e449db5ff6f1666cfbab779cd7eaa044e4f1bad2df7e300bc797": {"username": "User02"}
+            }
+
+
+def apikeyAuth(token):
+    info = TOKEN_DB.get(token, None)
+    if not info:
+        abort(
+            400,
+            "Invalid api key.",
+        )
+    print("INFO: user " + info["username"] + " authenticated.")
+    return info
 
 def ping():
     return "pong"
@@ -22,12 +36,13 @@ def rag(inputData):
         wd_results = wd.queryWD(question)
         context = ""
         for passage in wd_results:
-            context = context + passage['text']
+            if len(context) < 2000:
+                context = context + passage['text']
         #print(context)
         prompt = wx.buildRAGPrompt(question, context)
         wx_results = wx.genWX(prompt)
         #print(wx_results)
-        retVal =  jsonify({"question": question, 'answer': wx_results, 'source' : wd_results})
+        retVal =  jsonify({"question": question, 'answer': wx_results["output"], 'source' : wd_results, "prompt": wx_results["prompt"]})
         return retVal,200
     else:
         abort(
