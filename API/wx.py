@@ -115,7 +115,23 @@ PYTANIE:
 ODPOWIEDŹ: """
 
 
-my_prompt = test6 
+test7="""
+Poniżej znajduje się instrukcja opisująca zadanie. Napisz odpowiedź, która odnosi się do całej treści Artykułu.
+
+### Instrukcja:
+Odpowiedz w jednym akapicie na pytanie zadane do treści artykułu: {{QUESTION}}
+
+Artykuł:
+{{CONTEXT}}
+
+### Odpowiedź:
+"""
+
+
+
+
+
+my_prompt = test7 
 
 class wxService:
     def __init__(self, configFile):
@@ -162,7 +178,7 @@ class wxService:
             "decoding_method": "greedy",  
             "max_new_tokens": 500,  
             "min_new_tokens": 0,  
-            "stop_sequences": [ '\n' ],  
+            "stop_sequences": [ ],  
             "repetition_penalty": 1 
         }
         generated_response = self.wxModel.generate( prompt, gen_params_override )

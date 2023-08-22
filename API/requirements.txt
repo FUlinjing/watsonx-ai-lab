@@ -1,4 +1,5 @@
 Flask==2.2.5 
+flask_cors
 ibm-watson>=7.0.0
 ibm_cloud_sdk_core
 ibm_watson_machine_learning
