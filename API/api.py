@@ -50,5 +50,32 @@ def rag(inputData):
             "No question provided.",
         )
 
-    
-   
+def ragBAM(inputData):
+    #print(inputData)
+    question = inputData.get("question")
+    #print(type(question))
+    if question:
+        wd_results = wd.queryWD(question)
+        context = ""
+        for passage in wd_results:
+            if len(context) < 2000:
+                context = context + passage['text']
+        #print(context)
+        PT = "<s>[INST]" + \
+            "<<SYS>>Jesteś bardzo pomocnym asystentem. Zawsze podajesz zwięzłe odpowiedzi w maksymalnie 4 zdaniach. Dostałeś informacje w formie fragmentów tekstu.<</SYS>>\n" + \
+            "Używając wyłacznie informacji podanych poniżej odpowiedz w jednym krótkim akapicie na pytanie postawione na końcu\n\n" + \
+            "Podane informacje:\n" + \
+            "{{CONTEXT}}\n" + \
+            "[/INST]\n\n" +\
+            "PYTANIE: {{QUESTION}}\n" + \
+            "ODPOWIEDŹ: "
+        prompt = wx.buildRAGPrompt(question, context, promptTemplate=PT)
+        wx_results = wx.genBAM(prompt)
+        #print(wx_results)
+        retVal =  jsonify({"question": question, 'answer': wx_results["output"], 'source' : wd_results, "prompt": wx_results["prompt"]})
+        return retVal,200
+    else:
+        abort(
+            400,
+            "No question provided.",
+        )

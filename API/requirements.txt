@@ -1,3 +1,4 @@
+ibm-generative-ai
 Flask==2.2.5 
 flask_cors
 ibm-watson>=7.0.0
