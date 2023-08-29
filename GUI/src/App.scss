@@ -1,0 +1,11 @@
+@use './components/AppHeader/AppHeader';
+@use './content/LandingPage/LandingPage';
+@use './content/DemoRagPage/DemoRagPage';
+
+.cds--header {
+    background-color: rgb(190,147,248) ;
+}
+
+a.cds--header__menu-item {
+    background-color: rgb(190,147,248) ;
+}
