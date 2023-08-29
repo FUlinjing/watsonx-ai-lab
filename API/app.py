@@ -2,7 +2,9 @@ from flask import render_template # Remove: import Flask
 from flask_cors import CORS
 import connexion
 
-app = connexion.App(__name__, specification_dir="./SPECS")
+app = connexion.App(__name__, 
+	specification_dir="./SPECS", 
+	server_args={'template_folder': './TEMPLATES'})
 CORS(app.app)
 app.add_api("openapi.yaml")
 
