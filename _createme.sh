@@ -3,7 +3,7 @@
 CURDIR=`pwd`
 
 ./_verify.sh
-if [[ .$?. != .0.]; then
+if [[ .$?. != .0. ]]; then
 	exit 1
 fi
 
