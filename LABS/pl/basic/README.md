@@ -1,4 +1,4 @@
-# Lab 0 : Przygotowanie środowiska watsonx.ai SaaS
+# Lab 0 : Przygotowanie środowiska 
 
 ### Środowisko watsonx.ai
 W celu uzyskania dostępu do środowiska, w pierwszej kolejności należy uzyskać dostęp do środowiska watsonx.ai SaaS.
@@ -53,4 +53,64 @@ Przed rozpoczęciem laboratorium, upewnij się, że konto na które jesteś zalo
 itz-watsonx
 ```
 
+### Środowisko python
+Środowisko Python będzie potrzebne do przeprowadzenia drugiej części warsztatów, gdzie z poziomu Jupyter notebooka będziesz mógł komunikowac się z duzymi modelami językowymi w serwisie WatsonX. 
 
+Aby przygotować swoje środowisko Python, musisz mieć zainstalowane na swoim komputerze narzędzie `podman`, gdyż będziemy używali kontenerów.
+
+Jeżeli nie masz go zainstalowanego, to pobierz pakiet instalacyjny ze strony https://podman.io w sekcji "Downloads". Uruchom program instalacyjny i postępuj zgodnie z instrukcjami dla Twojego systemu operacyjnego opisanymi na stronie https://podman.io/docs/installation 
+
+Po poprawnej instalacji narzędzia `podman`, uruchom okno terminala i zainicjuj maszynę wirtualną `podman` wykonując sekwencję następujących komend:
+```
+podman machine init
+podman machine start
+```
+
+Podman korzysta z QEMU, więc po wykonaniu komend wskazanych powyżej sprawdź, czy maszyna wirtualna działa poprawnie wykonując w tym samy oknie terminala komendę:
+```
+podman machine list 
+```
+
+Jeżeli `podman` jest gotowy do pracy, to powinieneś uzyskać na ekranie następujące informacje:
+```
+NAME                     VM TYPE     CREATED        LAST UP            CPUS        MEMORY      DISK SIZE
+podman-machine-default*  qemu        14 months ago  Currently running  1           2GiB        100GiB
+```
+
+Świetnie, środowisko do uruchamiania kontenerów mamy przygotowane. Zbudujmy zatem kontener z naszym Jupyter Serwerem. 
+
+utwórz w dowolnym katalogu plik `Dockerfile` posiadający następującą treść
+```
+FROM jupyter/base-notebook:latest
+
+RUN pip install --upgrade pip
+RUN pip install ibm_watson_machine_learning
+
+EXPOSE 8888
+
+ENTRYPOINT jupyter notebook --ip='*' --NotebookApp.token='' --NotebookApp.password=''
+```
+
+plik `Dockerfile` posłuży nam do zbudowania naszego obrazu Dockera z zainstalowanymi bibliotekami pythona. 
+
+W celu zbudowania takiego obrazu o nazwie `jupyter-img` wykonaj komendę w oknie terminala będąc w katalogu w jakim znajduje się utworzony przez Ciebie plik `Dockerfile`
+```
+podman build -t jupyter .
+```
+
+uruchom kontener z utworzonego wcześniej obrazu Dockera komendą
+```
+podman run -d --name jupyter -p 8888:8888 jupyter
+```
+
+sprawdź, czy kontener o nazwie jupyter działa komendą:
+```
+podman ps -a 
+```
+
+Jeżeli wynik działania komendy w kolumnie STATUS pokazuje wartość UP, oznacza to, że kontener został uruchomiony poprawnie.
+
+Teraz w dowolnej przeglądarce WEB, uruchom stronę o URL: http://localhost:8888
+W prawym górnym rogu przeglądarki znajdziesz przycisk `Upload`, wciśnij go aby załadować przygotowany jupyter notebook `prompt_engineering_challenge.ipynb` - znajdziesz go w repozytorium GIT, podany przez prowadzącego. 
+
+po załadowaniu jupyter notebooka jesteś gotowy do pracy.
