@@ -9,7 +9,7 @@ t[5]="Checking python"           ;n[5]="python is not installed!"  ; c[5]='pytho
 t[6]="Checking pip"              ;n[6]="pip is not installed!"     ; c[6]='pip --version; exit $?'
 t[7]="Checking if ./API/service.WD.cred file exists";n[7]="Create ./API/service.WD.cred file from template!";c[7]='test -f ./API/service.WD.cred; exit $?'
 t[8]="Checking if ./API/service.WX.cred file exists";n[8]="Create ./API/service.WX.cred file from template!";c[8]='test -f ./API/service.WX.cred; exit $?'
-t[9]="Checking if ./GUI/settings.env file exists";n[8]="Create ./GUI/settings.env file from template!";c[8]='test -f ./GUI/settings.env; exit $?'
+t[9]="Checking if ./GUI/settings.env file exists";n[8]="Create ./GUI/settings.env file from template!";c[9]='test -f ./GUI/settings.env; exit $?'
 
 check () {
 	text="$1"
