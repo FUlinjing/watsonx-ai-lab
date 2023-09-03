@@ -1,5 +1,8 @@
 # Lab 2 - Zaawansowany Prompt Engineering
 
+### Środowisko
+Podane laboratorium realizujemy z wykorzystaniem dostarczonej przez prowadzącego, maszyny wirtualnej z wszystkimi wymaganymi bibliotekami lub na swojej lokalnej maszynie, po skonfigurowaniu obrazu dostępnego poprzez podman.
+
 ### Wprowadzenie
 
 W podanym [Jupyter Notebook](./prompt_engineering_challenge.ipynb) znajdziesz instrukcję, w jaki sposób połączyć się do swojego projektu w środowisku watsonx.ai, bezpośrednio z kodu Pythona. 

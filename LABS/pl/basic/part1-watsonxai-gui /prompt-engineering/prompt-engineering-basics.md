@@ -14,6 +14,7 @@ Rezultatem tego działania powinien być nowy projekt, znajdujący się w zakła
 
 <img src="../images/services.png" width="80%" alt="prompt" />
 
+W dzisiejszym laboratorium będziemy wykorzystywać Prompt Lab, czyli pierwszy serwis opatrzony napisem - "Experiment with foundational models and build prompts with Prompt Lab"
 
 **Note:** Poniższe obrazki przedstawiają rzeczywiste wyniki z watsonx.ai. Lekko szary tekst to prompt. Tekst podświetlony na niebiesko to odpowiedź modelu.
 
