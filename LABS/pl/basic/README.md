@@ -1,4 +1,4 @@
-# Lab 0 : Przygotowanie środowiska 
+# Przygotowanie środowiska 
 
 ### IBMid
 Pierwszym, podstawowym wymogiem, do przystąpienia do niniejszego laboratorium, jest posiadanie swojego IBMid, umożliwiającego zalogowanie się do IBM Cloud. Jeśli nie posiadasz swojego IBMid, możesz uzyskać je, wypełniając formularz dostępny pod poniższym linkiem:
