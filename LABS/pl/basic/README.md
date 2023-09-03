@@ -1,5 +1,12 @@
 # Lab 0 : Przygotowanie środowiska 
 
+### IBMid
+Pierwszym, podstawowym wymogiem, do przystąpienia do niniejszego laboratorium, jest posiadanie swojego IBMid, umożliwiającego zalogowanie się do IBM Cloud. Jeśli nie posiadasz swojego IBMid, możesz uzyskać je, wypełniając formularz dostępny pod poniższym linkiem:
+
+```
+https://www.ibm.com/account/reg/us-en/signup?formid=urx-19776&target=https%3A%2F%2Flogin.ibm.com%2Foidc%2Fendpoint%2Fdefault%2Fauthorize%3FqsId%3Db9977aed-1e6b-4321-9b43-ee4365544452%26client_id%3DODllMDk4YzItMjgxOC00&_gl=1*1nosucy*_ga*MTc5MjI1NTMxNS4xNjg5MDcxNjU0*_ga_FYECCCS21D*MTY5Mjc5NTYxOS43NS4xLjE2OTI3OTYxNTQuMC4wLjA
+```
+
 ### Środowisko watsonx.ai
 W celu uzyskania dostępu do środowiska, w pierwszej kolejności należy uzyskać dostęp do środowiska watsonx.ai SaaS.
 Dostęp można uzyskać poprzez rezerwację od prowadząego szkolenie lub rezerwując środowisko watsonx.ai SaaS bezpośrednio z [Techzone](https://techzone.ibm.com/collection/tech-zone-certified-base-images/journey-watsonx)

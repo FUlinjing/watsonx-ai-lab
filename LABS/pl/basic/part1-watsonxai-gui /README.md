@@ -5,8 +5,11 @@ W ramach dzisiejszego szkolenia, w pierwszej części, wykorzystamy środowisko 
 ```
 https://dataplatform.cloud.ibm.com/wx/home?context=wx
 ```
-Podczas rozpoczęcia pracy, proszę upewnić się, że konto na które jesteśmy zalogowani nosi nazwę:
-
+Podczas rozpoczęcia pracy, proszę upewnić się, że region w którym się zalogowaliśmy nosi nazwę 
+```
+Dallas
+```
+a konto na które jesteśmy zalogowani nosi nazwę:
 ```
 itz-watsonx
 ```

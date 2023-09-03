@@ -1,5 +1,20 @@
 # Prompt engineering
 
+### 0. Przygotowanie projektu
+Pierwszym krokiem, przed przystąpieniem do laboratorium jest posiadanie projektu w watsonx.ai. W większości przypadków, projekty powinny wygenerować się automatycznie, nazwa projektu powinna nosić nazwę "Imię uczestnika sandbox", np. "Joanna's sandbox", tak jak na poniższym screenie:
+
+<img src="../images/projektsandbox.png" width="80%" alt="prompt" />
+
+Niestety, w niektórych przypadkach, posiadając poniższy widok, projekt należy wygenerować ręcznie.
+
+<img src="../images/sandboxmanual.png" width="80%" alt="prompt" />
+
+W tym celu, w sekcji Projects, klikamy na niebieski button "Create a sandbox project" i nazywamy projekt dowolną nazwą. 
+Rezultatem tego działania powinien być nowy projekt, znajdujący się w zakładce Project, a także dostępność serwisów wykorzystywanych do pracy z watsonx.ai.
+
+<img src="../images/services.png" width="80%" alt="prompt" />
+
+
 **Note:** Poniższe obrazki przedstawiają rzeczywiste wyniki z watsonx.ai. Lekko szary tekst to prompt. Tekst podświetlony na niebiesko to odpowiedź modelu.
 
 ### 1.0 Podstawy dużych modeli językowych (LLMs)
@@ -158,8 +173,3 @@ Jeśli Twój prompt zawiera wszystkie omówione tutaj wskazówki i najlepsze pra
 
 Sprawdź [Kurs NLP od HuggingFace](https://huggingface.co/learn/nlp-course/chapter0/1?fw=pt)
 
-# Przydatne linki
-
-- [OpenAI prompt intro](https://platform.openai.com/docs/guides/completion/prompt-design)
-- [OpenAI prompt engineering tutorial](https://help.openai.com/en/articles/6654000-best-practices-for-prompt-engineering-with-openai-api)
-- [co:here prompt engineering tutorial](https://docs.cohere.ai/docs/prompt-engineering)
