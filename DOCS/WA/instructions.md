@@ -4,7 +4,9 @@ Perform this step if you do not already have a Watson Assisant resource availabl
 
 First, go to https://cloud.ibm.com/resources where you need to click the "Create resource" button
 
-IMG - 0.png
+<p align="center">
+  <img src="0.png" width="600"/>
+</p>
 
 Then search in the resource directory for Watson Assistant and then select it
 
