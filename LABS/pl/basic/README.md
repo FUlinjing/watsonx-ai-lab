@@ -120,6 +120,6 @@ Jeżeli wynik działania komendy w kolumnie STATUS pokazuje wartość UP, oznacz
 Teraz w dowolnej przeglądarce WEB, uruchom stronę o URL: http://localhost:8888
 W prawym górnym rogu przeglądarki znajdziesz przycisk `Upload`, wciśnij go aby załadować przygotowany jupyter notebook `prompt_engineering_challenge.ipynb` - znajdziesz go w repozytorium GIT, podany przez prowadzącego. 
 
-Zapisz jako >> URL: https://raw.github.ibm.com/Robert-Kleniewski/techxchange-watsonx/main/LABS/pl/basic/part2-watsonx-python/prompt_engineering_challenge.ipynb?token=AADMNMNAZYMAOIVIPQAA6O3E73OMY
+URL: https://raw.github.ibm.com/Robert-Kleniewski/techxchange-watsonx/main/LABS/pl/basic/part2-watsonx-python/prompt_engineering_challenge.ipynb?token=AADMNMNAZYMAOIVIPQAA6O3E73OMY >> Zapisz jako >> pamiętaj plik musi kończyć się .ipynb
 
 po załadowaniu jupyter notebooka jesteś gotowy do pracy.
