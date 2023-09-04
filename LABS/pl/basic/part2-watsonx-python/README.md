@@ -39,3 +39,22 @@ W ramach tego laboratorium będziemy łączyć się do środowiska watsonx.ai z 
 <p align="center">
   <img src="images/Step5.png" width="600"/>
 </p>
+
+### Uzyskanie project_id
+W celu uzyskania swojego project_id wchodzimy w menu główne, zlokalizowane w lewym górnym rogu ekranu
+
+<p align="center">
+  <img src="images/projectid_1.png" width="600"/>
+</p>
+
+Następnie wybieramy z listy zakładkę Projects, a w niej "View all projects"
+
+<p align="center">
+  <img src="images/projectid_2.png" width="600"/>
+</p>
+
+Następnie klikamy na nazwę naszego projektu i kierujemy się do zakładki Manage, w której znajduje się project_id
+
+<p align="center">
+  <img src="images/projectid_3.png" width="600"/>
+</p>
