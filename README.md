@@ -17,6 +17,7 @@ Joanna Frankiewicz (joanna.frankiewicz@ibm.com) <br>
 Robert Kleniewski (robert.kleniewski@pl.ibm.com) <br>
 Daniel Hutyra (daniel.hutyra@ibm.com) <br>
 Waldemar Kessler (waldemar.kessler@ibm.com) <br>
+Mikolaj Jarowski (mikolaj.jaworski@ibm.com) <br>
 
 
 # RAG Demo
