@@ -1,7 +1,0 @@
-curl -q -X 'POST' \
-  'http://127.0.0.1:8000/api/rag' \
-  -H 'accept: application/json' \
-  -H 'X-API-Key: 544ae5b1fb60e449db5ff6f1666cfbab779cd7eaa044e4f1bad2df7e300bc797' \
-  -H 'Content-Type: application/json' \
-  -d '{
-  "question": "Co to jest infrastruktura ICT?" }' | jq
