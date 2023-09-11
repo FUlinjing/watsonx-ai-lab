@@ -20,6 +20,6 @@ Waldemar Kessler (waldemar.kessler@ibm.com) <br>
 Mikolaj Jarowski (mikolaj.jaworski@ibm.com) <br>
 
 
-# RAG Demo
+# Retrieval-Augmented Generation (RAG) Demo
 To view the RAG demo recording, click on the link below:
 https://ibm.box.com/s/3ii3kad6w40e93ufpuc7swn2e76n4qwr
