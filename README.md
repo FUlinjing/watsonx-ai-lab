@@ -11,7 +11,7 @@ Welcome to our technical lab session. We'll delve into the essentials of prompt 
 3. Integration of watsonx.ai with Python [Lab 3](/LABS/3_prompt_engineering_via_code/README.md)
 
 ### Advance - Exploring Langchain and RAG
-4. Use Watsonx and LangChain to make a series of calls to a language model[Lab 4](/LABS/1_prompt_engineering/README.md)
+4. Use Watsonx and LangChain to make a series of calls to a language model [Lab 4](/LABS/1_prompt_engineering/README.md)
 5. Use Watsonx and LangChain to answer questions using RAG approach [Lab 5](/LABS/2_prompt_engineering_advanced/README.md)
 
    
