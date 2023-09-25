@@ -57,12 +57,4 @@ In many cases, the project should be created automatically and be named "Your na
 
 <img src="../../images/projectid_2.png" width="80%" alt="prompt" />
 
-5. Click on the name of your project and head to the Manage tab, where the project_id is located.
 
-<img src="../../images/projectid_3.png" width="80%" alt="prompt" />
-
-6. Then copy the project_id and save it in your chosen location. We will use it in the last part of the lab.
-
-# Next step
-
-In the next step, proceed to set up a [virtual environment for Python](./prepare_venv_for_python.md).
